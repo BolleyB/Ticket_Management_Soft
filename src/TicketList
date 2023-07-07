@@ -1,0 +1,20 @@
+import React from 'react';
+
+const TicketList = ({ tickets }) => {
+  return (
+    <div>
+      <h2>All Tickets</h2>
+      <ul>
+        {tickets.map((ticket) => (
+          <li key={ticket._id}>
+            <strong>Property:</strong> {ticket.property},{' '}
+            <strong>Issue:</strong> {ticket.issue},{' '}
+            <strong>Status:</strong> {ticket.status}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default TicketList;
